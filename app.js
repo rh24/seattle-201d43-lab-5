@@ -49,13 +49,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  const sum = a + b + c;
-  const product = a * b * c;
+  // const sum = a + b + c;
+  // const product = a * b * c;
+  const theSum = sum(a, sum(b, c)[0])[0];
+  const theProduct = multiply(a, multiply(b, c)[0])[0];
   const subString = `${a} and ${b} and ${c}`;
-  const sumString = `${subString} sum to ${sum}.`;
-  const prodString = `The product of ${subString} is ${product}.`;
+  const sumString = `${subString} sum to ${theSum}.`;
+  const prodString = `The product of ${subString} is ${theProduct}.`;
   
-  return [sum, product, sumString, prodString];
+  return [theSum, theProduct, sumString, prodString];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
