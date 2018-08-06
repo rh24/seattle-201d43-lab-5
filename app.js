@@ -148,6 +148,11 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let product;
   const subString = dynamicArray.join(',');
 
+  // let product = 1;
+  // for (let i = 0; i < dynamicArray.length; i++) {
+  //   product = multiply(product, dynamicArray[i])[0];
+  // }
+
   for (let i = 1; i < dynamicArray.length-1; i++) {
     // 0 is the index of product
     product = multiply(result, dynamicArray[i+1])[0];
