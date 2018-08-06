@@ -112,7 +112,7 @@ function multiplyArray(multArr) { //eslint-disable-line
   const subString = multArr.join(',');
 
   for (let i = 0; i < multArr.length; i ++) {
-    product *= multArr[i];
+    product = multiply(product, multArr[i])[0];
   }
 
   return [product, `The numbers ${subString} have a product of 24.`];
