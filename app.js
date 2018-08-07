@@ -49,8 +49,6 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  // const sum = a + b + c;
-  // const product = a * b * c;
   const theSum = sum(a, sum(b, c)[0])[0];
   const theProduct = multiply(a, multiply(b, c)[0])[0];
   const subString = `${a} and ${b} and ${c}`;
@@ -79,15 +77,14 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let sum = 0;
+  let theSum = 0;
   const subString = sumArr.join(',');
-  const finalArr = [];
 
   for (let i = 0; i < sumArr.length; i++) {
-    sum += sumArr[i];
+    theSum = sum(theSum, sumArr[i])[0];
   }
 
-  return [sum, `${subString} was passed in as an array of numbers, and ${sum} is their sum.`];
+  return [theSum, `${subString} was passed in as an array of numbers, and ${theSum} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
